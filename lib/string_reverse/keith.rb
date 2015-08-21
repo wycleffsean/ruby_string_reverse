@@ -1,16 +1,4 @@
-require_relative "string_reverse/keith"
-require_relative "string_reverse/sean"
-
-=begin
 class String
-  def slow_reverse
-    arr = split ''
-    (arr.length / 2).times do |i|
-      arr[i], arr[-(i + 1)] = arr[-(i + 1)], arr[i]
-    end
-    arr.join ''
-  end
-
   def keith_reverse
     (0..length/2).each do |i|
       tmp = self[i]
@@ -27,4 +15,3 @@ class String
     self
   end
 end
-=end

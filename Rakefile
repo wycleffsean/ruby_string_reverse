@@ -1,10 +1,10 @@
-require 'rake/extensiontask'
-
-Rake::ExtensionTask.new 'string_reverse' do |ext|
-  ext.lib_dir = 'lib/string_reverse'
+task :compile do
+  Dir.glob(__dir__ + '/**/extconf.rb')
+    .map {|conf| File.dirname(conf) }
+    .each {|dir| `cd #{dir} && ruby extconf.rb && make` }
 end
 
-task 'benchmark' do
+task :benchmark => [:compile] do
   require 'benchmark'
   require_relative 'lib/string_reverse'
 
