@@ -1,0 +1,23 @@
+PATH
+  remote: .
+  specs:
+    string_reverse (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rake (10.4.2)
+    rake-compiler (0.9.5)
+      rake
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.9)
+  rake (~> 10.0)
+  rake-compiler (~> 0.9.5)
+  string_reverse!
+
+BUNDLED WITH
+   1.10.6
