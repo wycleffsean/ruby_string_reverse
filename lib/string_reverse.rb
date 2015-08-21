@@ -1,3 +1,3 @@
-Dir.glob(__dir__ + '/string_reverse/*.rb') do |file|
+Dir.glob(File.dirname(__FILE__) + '/string_reverse/*.rb') do |file|
   require file
 end

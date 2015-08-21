@@ -3,7 +3,7 @@ require 'rspec/core/rake_task'
 task :default => [:spec, :benchmark]
 
 task :compile do
-  Dir.glob(__dir__ + '/**/extconf.rb')
+  Dir.glob(File.dirname(__FILE__) + '/**/extconf.rb')
     .map {|conf| File.dirname(conf) }
     .each {|dir| `cd #{dir} && ruby extconf.rb && make` }
 end
