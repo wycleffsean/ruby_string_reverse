@@ -1,5 +1,6 @@
 # String Reverse Challenge
 
+[![Build Status](https://travis-ci.org/wycleffsean/string-reverse-challenge.svg)](https://travis-ci.org/wycleffsean/string-reverse-challenge)
 
 
 ## Usage

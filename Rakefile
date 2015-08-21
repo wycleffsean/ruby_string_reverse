@@ -1,10 +1,14 @@
-task :default => [:benchmark]
+require 'rspec/core/rake_task'
+
+task :default => [:spec, :benchmark]
 
 task :compile do
   Dir.glob(__dir__ + '/**/extconf.rb')
     .map {|conf| File.dirname(conf) }
     .each {|dir| `cd #{dir} && ruby extconf.rb && make` }
 end
+
+RSpec::Core::RakeTask.new(:spec => :compile)
 
 task :benchmark => [:compile] do
   require 'benchmark'
