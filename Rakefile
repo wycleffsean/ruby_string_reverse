@@ -1,3 +1,5 @@
+task :default => [:benchmark]
+
 task :compile do
   Dir.glob(__dir__ + '/**/extconf.rb')
     .map {|conf| File.dirname(conf) }

@@ -1,2 +1,3 @@
-require_relative "string_reverse/keith"
-require_relative "string_reverse/sean"
+Dir.glob(__dir__ + '/string_reverse/*.rb') do |file|
+  require file
+end
