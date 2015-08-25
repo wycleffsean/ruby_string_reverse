@@ -6,6 +6,7 @@ shared_examples_for "a string reverse method" do
 
   it "reverses string" do
     str = "The quick brown fox"
-    expect(string_reverse[str]).to eq str.reverse
+    dup = str.dup
+    expect(string_reverse[str]).to eq dup.reverse
   end
 end
