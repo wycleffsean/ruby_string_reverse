@@ -25,8 +25,9 @@ task :benchmark => [:compile] do
   Benchmark.bm do |x|
     x.report('String#reverse') { n.times { THOREAU.reverse }}
     x.report('String#seans_xor_swap') { n.times { THOREAU.seans_xor_swap }}
-    x.report('String#seans_slow_reverse') { n.times { THOREAU.seans_slow_reverse }}
     x.report('String#keith_reverse') { n.times { THOREAU.keith_reverse }}
     x.report('String#keith_reverse2') { n.times { THOREAU.keith_reverse2 }}
+    x.report('String#zach_recruse_reverse') { n.times { THOREAU.zachs_recurse_reverse }}
+    x.report('String#seans_slow_reverse') { n.times { THOREAU.seans_slow_reverse }}
   end
 end
